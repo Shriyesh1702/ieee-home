@@ -1,0 +1,159 @@
+.showcase-section {
+  position: relative;
+
+  padding: 10rem 4%;
+  padding-top: 5rem;
+  margin-top: -100px;
+  background: linear-gradient(to bottom, #050916, #020817);
+
+  overflow: hidden;
+}
+
+/* GRID */
+
+.showcase-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2rem;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+/* CARD */
+
+.showcase-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 32px;
+
+  background: #0f172a;
+
+  min-height: 850px;
+
+  cursor: pointer;
+
+  isolation: isolate;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  transition:
+    transform 0.5s ease,
+    border 0.5s ease;
+}
+.showcase-card:hover .showcase-media {
+  transform: scale(1.15);
+  filter: grayscale(0.9);
+  transition: transform 1s ease;
+}
+
+/* MEDIA */
+
+.media-wrapper {
+  position: absolute;
+
+  inset: -8%;
+
+  overflow: hidden;
+  transition: transform 1.2s ease;
+}
+
+.membership {
+  transform: skewY(13deg) scale(1.15);
+}
+.societies {
+  transform: skewY(-13deg) scale(1.15);
+}
+
+.showcase-media {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 1.5s ease;
+
+  filter: brightness(0.45) contrast(1.1);
+}
+
+/* OVERLAY */
+
+.media-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(2, 8, 23, 0.98),
+    rgba(2, 8, 23, 0.55),
+    rgba(2, 8, 23, 0.15)
+  );
+}
+
+.societies-overlay {
+  background:
+    radial-gradient(circle at center, rgba(0, 212, 255, 0.08), transparent 55%),
+    linear-gradient(to top, rgba(2, 8, 23, 0.98), rgba(2, 8, 23, 0.45));
+}
+
+/* CONTENT */
+
+.showcase-content {
+  position: absolute;
+
+  bottom: 0;
+
+  padding: 2.6rem;
+
+  z-index: 2;
+}
+
+.showcase-content h2 {
+  font-size: clamp(3rem, 5vw, 6rem);
+  padding-top: 1.7rem;
+  line-height: 0.95;
+
+  font-weight: 800;
+
+  margin-bottom: 1.5rem;
+}
+
+.showcase-content p {
+  color: #94a3b8;
+
+  line-height: 1.8;
+
+  max-width: 500px;
+
+  margin-bottom: 2rem;
+
+  font-size: 1.05rem;
+}
+.showcase-content-top {
+  color: #00aeef;
+}
+/* BUTTON */
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-card {
+    min-height: 700px;
+  }
+
+  .showcase-content {
+    padding: 2rem;
+  }
+
+  .showcase-content h2 {
+    font-size: 4rem;
+  }
+}

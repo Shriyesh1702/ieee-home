@@ -1,0 +1,24 @@
+.signal-field {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+}
+
+.signal-field::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 174, 239, 0.15),
+    transparent 45%
+  );
+
+  pointer-events: none;
+}

@@ -1,0 +1,194 @@
+.features {
+  position: relative;
+  transform-style: preserve-3d;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  padding-bottom: 8rem;
+
+  background: #020817;
+  background: linear-gradient(
+    rgba(2, 8, 23, 1) 0%,
+    rgba(107, 166, 255, 1) 75%,
+    rgba(5, 8, 22, 1) 100%
+  );
+
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  isolation: isolate;
+}
+
+/* glow */
+
+/* TOP */
+
+.features-top {
+  position: relative;
+
+  z-index: 2;
+
+  padding-left: 8%;
+  padding-right: 8%;
+
+  margin-bottom: 5rem;
+}
+
+.features-label {
+  color: #00d9ff;
+  margin-top: -3rem;
+  text-transform: uppercase;
+
+  letter-spacing: 0.25em;
+
+  font-size: 0.9rem;
+
+  margin-bottom: 1rem;
+}
+
+.features-top h2 {
+  font-size: clamp(4rem, 10vw, 8rem);
+  padding-top: 4%;
+  line-height: 0.9;
+  max-width: 1200px;
+  font-weight: 800;
+
+  margin-bottom: 2rem;
+}
+
+.features-description {
+  max-width: 700px;
+
+  color: #ffffff;
+
+  line-height: 1.8;
+
+  font-size: 1.1rem;
+}
+
+/* ROW */
+
+.features-row {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  gap: 2rem;
+
+  overflow-x: auto;
+
+  padding-left: 3.5%;
+  padding-right: 5rem;
+
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+
+  scrollbar-width: none;
+
+  will-change: transform;
+
+  transform: translateZ(0);
+}
+.features-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD */
+
+.feature-card {
+  position: relative;
+
+  width: 30vw;
+
+  min-width: 320px;
+  max-width: 370px;
+
+  height: 400px;
+
+  flex-shrink: 0;
+
+  border-radius: 32px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  background-color: rgba(15, 23, 42, 0.9);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    border 0.4s ease;
+}
+
+/* IMAGE */
+
+.feature-visual {
+  height: 60%;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+.feature-visual img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  will-change: transform;
+
+  transform: translateZ(0);
+
+  backface-visibility: hidden;
+}
+
+/* CONTENT */
+
+.feature-content {
+  padding: 2rem;
+}
+
+.feature-content h3 {
+  font-size: 1.8rem;
+
+  margin-bottom: 1rem;
+
+  font-weight: 700;
+}
+
+.feature-content p {
+  color: #94a3b8;
+
+  line-height: 1.7;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .features {
+    padding-top: 6rem;
+  }
+
+  .features-top h2 {
+    font-size: 4rem;
+  }
+
+  .feature-card {
+    width: 80vw;
+
+    min-width: 280px;
+
+    height: 440px;
+  }
+}
