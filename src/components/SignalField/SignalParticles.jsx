@@ -1,7 +1,7 @@
 import { Points, PointMaterial } from "@react-three/drei";
 import { useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { getCurveY } from "./curveuatils";
+import { getCurveY } from "./curveutils";
 
 export default function SignalParticles({ count = 1500, curves }) {
   const ref = useRef();
