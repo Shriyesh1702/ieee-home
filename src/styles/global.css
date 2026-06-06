@@ -10,7 +10,19 @@ body,
   width: 100%;
   min-height: 100%;
 }
+body::before {
+  content: "";
 
+  position: fixed;
+
+  inset: 0;
+
+  opacity: 0.03;
+
+  pointer-events: none;
+
+  background-image: url("/noise.png");
+}
 html {
   scroll-behavior: auto;
 }
@@ -22,6 +34,12 @@ body {
   font-family: Inter, system-ui, sans-serif;
 
   overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding-bottom: calc(4.25rem + env(safe-area-inset-bottom));
+  }
 }
 
 a {
@@ -40,4 +58,10 @@ ul {
 
 section {
   width: 100%;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }

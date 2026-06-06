@@ -1,7 +1,7 @@
 .showcase-section {
   position: relative;
 
-  padding: 10rem 4%;
+  padding: var(--section-padding-y) var(--section-padding-x);
   padding-top: 5rem;
   margin-top: -100px;
   background: linear-gradient(to bottom, #050916, #020817);
@@ -17,8 +17,7 @@
   grid-template-columns: repeat(2, 1fr);
 
   gap: 2rem;
-  padding-left: 6%;
-  padding-right: 6%;
+  padding-inline: clamp(0rem, 2vw, 6%);
 }
 
 /* CARD */
@@ -141,19 +140,20 @@
 /* MOBILE */
 
 @media (max-width: 900px) {
+  .showcase-section {
+    margin-top: -60px;
+  }
+
   .showcase-grid {
     grid-template-columns: 1fr;
+    padding-inline: 0;
   }
 
   .showcase-card {
-    min-height: 700px;
+    min-height: min(700px, 90vh);
   }
 
   .showcase-content {
     padding: 2rem;
-  }
-
-  .showcase-content h2 {
-    font-size: 4rem;
   }
 }

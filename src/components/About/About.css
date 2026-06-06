@@ -3,7 +3,7 @@ section {
 }
 
 .about {
-  padding: 8rem 8%;
+  padding: var(--section-padding-y) var(--section-padding-x);
   padding-bottom: 13rem;
 }
 .about-heading {
@@ -92,10 +92,23 @@ section {
 }
 
 .stat h3 {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
   font-size: clamp(4rem, 8vw, 7rem);
   font-weight: 900;
   line-height: 1;
   color: #ffffff;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-number {
+  text-align: right;
+}
+
+.stat-suffix {
+  margin-left: 0.05em;
 }
 
 .stat p {
@@ -104,4 +117,24 @@ section {
   font-size: 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .about {
+    padding-bottom: 6rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-right {
+    height: 280px;
+  }
+
+  .stats-container {
+    gap: 2.5rem;
+  }
 }

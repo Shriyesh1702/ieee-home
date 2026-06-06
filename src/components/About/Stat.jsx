@@ -26,8 +26,13 @@ export default function Stat({ value, suffix, label }) {
       whileInView={{ opacity: 1, y: 0 }}
     >
       <h3>
-        {count}
-        {suffix}
+        <span
+          className="stat-number"
+          style={{ minWidth: `${String(value).length}ch` }}
+        >
+          {count}
+        </span>
+        <span className="stat-suffix">{suffix}</span>
       </h3>
 
       <p>{label}</p>

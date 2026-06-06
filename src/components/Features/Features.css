@@ -28,8 +28,7 @@
 
   z-index: 2;
 
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-inline: var(--section-padding-x);
 
   margin-bottom: 5rem;
 }
@@ -100,10 +99,7 @@
 .feature-card {
   position: relative;
 
-  width: 30vw;
-
-  min-width: 320px;
-  max-width: 370px;
+  width: min(370px, 85vw);
 
   height: 400px;
 
@@ -178,17 +174,34 @@
 @media (max-width: 768px) {
   .features {
     padding-top: 6rem;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
   }
 
-  .features-top h2 {
-    font-size: 4rem;
+  .features-label {
+    margin-top: 0;
+  }
+
+  .features-top {
+    margin-bottom: 3rem;
+  }
+
+  .features-row {
+    padding-inline: var(--section-padding-x);
+    gap: 1.25rem;
   }
 
   .feature-card {
-    width: 80vw;
+    width: min(340px, 88vw);
+    height: auto;
+    min-height: 380px;
+  }
 
-    min-width: 280px;
+  .feature-content {
+    padding: 1.5rem;
+  }
 
-    height: 440px;
+  .feature-content h3 {
+    font-size: 1.4rem;
   }
 }

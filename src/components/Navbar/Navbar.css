@@ -18,8 +18,6 @@
   z-index: 1000;
 }
 
-/* LEFT */
-
 .nav-logo {
   justify-self: start;
 
@@ -29,8 +27,6 @@
   letter-spacing: 2px;
 }
 
-/* CENTER */
-
 .nav-center {
   display: flex;
   align-items: flex-start;
@@ -38,17 +34,17 @@
 }
 
 .scroll-number {
-  height: 48px;
-
-  display: flex;
-  align-items: center;
-
   font-size: 0.9rem;
-
+  line-height: 1;
   color: rgba(255, 255, 255, 0.65);
 }
 
-/* MENU */
+.scroll-number-value {
+  display: inline-block;
+  min-width: 3ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
 
 .menu-container {
   width: 200px;
@@ -109,9 +105,13 @@
   transform: translateY(0) scale(1);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
+
 .menu-item {
-  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
+
 .dropdown-menu a {
   padding: 14px 18px;
 
@@ -125,8 +125,6 @@
 
   padding-left: 24px;
 }
-
-/* RIGHT */
 
 .contact-btn {
   justify-self: end;
@@ -143,4 +141,60 @@
 
 .contact-btn:hover {
   transform: translateX(5px);
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    align-items: stretch;
+    justify-content: space-around;
+
+    padding: 0.4rem 0.5rem;
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+
+    background: rgba(8, 12, 28, 0.96);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+
+    padding: 0.35rem 0.25rem;
+
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+
+    transition: color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-nav-item.active {
+    color: var(--secondary);
+  }
+
+  .mobile-nav-item svg {
+    flex-shrink: 0;
+  }
 }

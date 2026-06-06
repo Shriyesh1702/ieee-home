@@ -11,7 +11,7 @@
 /* TOP */
 
 .collaborators-top {
-  padding-inline: 8%;
+  padding-inline: var(--section-padding-x);
 
   margin-bottom: 6rem;
 }
@@ -138,5 +138,26 @@
 
   to {
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .collaborators {
+    padding: 6rem 0;
+    margin-top: -60px;
+  }
+
+  .collaborators-top {
+    padding-inline: var(--section-padding-x);
+    margin-bottom: 4rem;
+  }
+
+  .logo-card {
+    width: 200px;
+    height: 120px;
+  }
+
+  .logo-card img {
+    width: 100px;
   }
 }

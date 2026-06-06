@@ -3,7 +3,7 @@
 
   overflow: hidden;
 
-  padding: 7rem 8% 2rem;
+  padding: var(--section-padding-y) var(--section-padding-x) 2rem;
 
   background: linear-gradient(to bottom, #050816, #020617);
 
