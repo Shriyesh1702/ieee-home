@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Home, Users, Calendars, GraduationCap,CircleUser } from "lucide-react";
+import { Home, Users, Calendars, GraduationCap, } from "lucide-react";
 import "./Navbar.css";
 import { motion, AnimatePresence } from "framer-motion";
 
