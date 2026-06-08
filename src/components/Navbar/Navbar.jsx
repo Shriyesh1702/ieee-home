@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Home, Users, Calendars, GraduationCap, } from "lucide-react";
+import {
+  Home,
+  Users,
+  Calendars,
+  GraduationCap,
+  CircleUser,
+} from "lucide-react";
 import "./Navbar.css";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -9,7 +15,7 @@ const MOBILE_TABS = [
   { label: "Team", to: "/team", Icon: Users },
   { label: "Events", to: "/events", Icon: Calendars },
   { label: "Alumni", to: "/alumni", Icon: GraduationCap },
-  { label: "Contact", to: "/contact", Icon: CircleUser }
+  { label: "Contact", to: "/contact", Icon: CircleUser },
 ];
 
 export default function Navbar() {
@@ -102,11 +108,7 @@ export default function Navbar() {
                     transition={{ duration: 0.3 }}
                   >
                     {MOBILE_TABS.map(({ label, to }) => (
-                      <Link
-                        key={to}
-                        to={to}
-                        onClick={() => setMenuOpen(false)}
-                      >
+                      <Link key={to} to={to} onClick={() => setMenuOpen(false)}>
                         {label}
                       </Link>
                     ))}
